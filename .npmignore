@@ -1,0 +1,11 @@
+.DS_Store
+.nyc_output
+.eslintrc.json
+.github/
+.travis.yml
+v8.log
+coverage/
+node_modules/
+rollup/
+test/
+tsconfig.json

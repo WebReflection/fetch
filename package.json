@@ -1,0 +1,48 @@
+{
+  "name": "@webreflection/fetch",
+  "version": "0.0.0",
+  "description": "A fetch with Response abilities.",
+  "main": "./cjs/index.js",
+  "scripts": {
+    "build": "npm run cjs && npm run rollup:es && npm run ts && npm run test",
+    "cjs": "ascjs --no-default esm cjs",
+    "rollup:es": "rollup --config rollup/es.config.js",
+    "test": "c8 node test/index.js",
+    "ts": "tsc -p .",
+    "coverage": "mkdir -p ./coverage; c8 report --reporter=text-lcov > ./coverage/lcov.info"
+  },
+  "keywords": [
+    "fetch",
+    "response",
+    "merged"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "ascjs": "^6.0.3",
+    "c8": "^9.1.0",
+    "rollup": "^4.10.0",
+    "typescript": "^5.3.3"
+  },
+  "module": "./esm/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./esm/index.js",
+      "default": "./cjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "unpkg": "es.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/fetch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/fetch/issues"
+  },
+  "homepage": "https://github.com/WebReflection/fetch#readme"
+}
