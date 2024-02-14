@@ -1,5 +1,7 @@
 # fetch
 
+[![build](https://github.com/WebReflection/fetch/actions/workflows/node.js.yml/badge.svg)](https://github.com/WebReflection/fetch/actions/workflows/node.js.yml)
+
 A fetch with Response abilities.
 
 ```js
