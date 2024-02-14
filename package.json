@@ -1,6 +1,6 @@
 {
   "name": "@webreflection/fetch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A fetch with Response abilities.",
   "main": "./cjs/index.js",
   "scripts": {
