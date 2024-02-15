@@ -1,15 +1,18 @@
 const fetch = require('../cjs');
 
-const server = require('http').createServer((req, res) => {
+const PORT = 7357;
+const URL = `http://0.0.0.0:${PORT}/`;
+
+const server = require('http').createServer((_, res) => {
     res.end('OK');
-}).listen(7357);
+}).listen(PORT);
 
 (async () => {
-    console.assert(await fetch('http://0.0.0.0:7357/').ok);
-    console.assert(await fetch('http://0.0.0.0:7357/').text() === 'OK');
+    console.assert(await fetch(URL).ok);
+    console.assert(await fetch(URL).text() === 'OK');
 
     Promise.prototype.OK = 'OK';
-    const local = fetch('http://0.0.0.0:7357/');
+    const local = fetch(URL);
     local.then(() => {
         console.log(local.OK);
     });

@@ -6,6 +6,8 @@
 
 A fetch with Response abilities.
 
+<sup>(... see what I did there?)</sup>
+
 ```js
 import fetch from '@webreflection/fetch';
 

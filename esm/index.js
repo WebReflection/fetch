@@ -1,4 +1,4 @@
-// a bit terser code than I usual write but it's 10 LOC within 80 cols
+// a bit terser code than I usually write but it's 10 LOC within 80 cols
 // if you are struggling to follow the code you can replace 1-char
 // references around with the following one, hoping that helps :-)
 
@@ -22,8 +22,8 @@ const handler = {
 };
 
 /**
- * @param {RequestInfo | URL} input 
- * @param  {...RequestInit} init 
+ * @param {RequestInfo | URL} input
+ * @param  {...RequestInit} init
  * @returns {Promise<Response> & Response}
  */
 export default (input, ...init) => new Proxy(fetch(input, ...init), handler);
