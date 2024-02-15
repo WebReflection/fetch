@@ -13,7 +13,7 @@ const isFunction = value => typeof value === 'function';
 
 const bypass = (p, k, { get, value }) => get || !isFunction(value) ?
                 p.then(r => r[k]) :
-                (...args) => p.then(r => value.apply(r, args));
+                (...args) => p.then(r => r[k](...args));
 
 const direct = (p, value) => isFunction(value) ? value.bind(p) : value;
 
