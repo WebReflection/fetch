@@ -2,7 +2,7 @@
 
 <sup>**Social Media Photo by [Anthony Duran](https://unsplash.com/@dogflirt) on [Unsplash](https://unsplash.com/)**</sup>
 
-[![build](https://github.com/WebReflection/fetch/actions/workflows/node.js.yml/badge.svg)](https://github.com/WebReflection/fetch/actions/workflows/node.js.yml)
+[![build](https://github.com/WebReflection/fetch/actions/workflows/node.js.yml/badge.svg)](https://github.com/WebReflection/fetch/actions/workflows/node.js.yml) [![Coverage Status](https://coveralls.io/repos/github/WebReflection/fetch/badge.svg?branch=main)](https://coveralls.io/github/WebReflection/fetch?branch=main)
 
 A fetch with Response abilities.
 
