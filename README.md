@@ -32,4 +32,10 @@ The export is simply a Proxy that forwards to the Response any explicit intent, 
     * use `try/catch` around `req.json()` or `req.text()` or any other forwarded method
     * use `const { status, headers } = await req` or `const status = await req.status` or any other way you like to introspect the failure
 
+```js
+// alternatively ...
+const { ok, text } = await fetch(URL);
+if (ok) console.log(await text());
+```
+
 If none of this is interesting to you though, we're good! You can move on happily ever after 👋
