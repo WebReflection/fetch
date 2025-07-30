@@ -30,6 +30,9 @@ const server = require('http').createServer((req, res) => {
         console.assert(message === `[404] Unable to fetch http://0.0.0.0:7357/unknown`, message);
     }
 
+    await fetch(URL).json().catch(error => {
+        console.log('\x1b[1mexpected:\x1b[0m', error);
+    });
 
     Promise.prototype.OK = 'OK';
     const local = fetch(URL);
