@@ -26,4 +26,11 @@ const handler = {
  * @param  {...RequestInit} init
  * @returns {Promise<Response> & Response}
  */
-export default (input, ...init) => new Proxy(fetch(input, ...init), handler);
+export default (input, ...init) => new Proxy(
+    fetch(input, ...init).then(
+        r => r.ok ? r : Promise.reject(
+            new Error(`[${r.status}] Unable to fetch ${input}`)
+        )
+    ),
+    handler
+);

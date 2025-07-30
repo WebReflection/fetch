@@ -19,12 +19,12 @@
   "author": "Andrea Giammarchi",
   "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
     "ascjs": "^6.0.3",
-    "c8": "^9.1.0",
-    "rollup": "^4.10.0",
-    "typescript": "^5.3.3"
+    "c8": "^10.1.3",
+    "rollup": "^4.46.2",
+    "typescript": "^5.8.3"
   },
   "module": "./esm/index.js",
   "type": "module",
